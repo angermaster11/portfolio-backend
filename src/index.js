@@ -8,6 +8,10 @@ db_connection()
     app.listen(process.env.PORT || 5000, () => {
         console.log(`Server started on port`,process.env.PORT);
     })
+
+    app.get("/",(req,res)=>{
+        res.status(200).send("Working.....")
+    })
 })
 .catch((err)=>{
     console.log(err)
